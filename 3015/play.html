@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>cat in woods</title>
+</head>
+<body>
+	<!-- All content is not modified to the default yes branch, the no branch graph will be hidden -->
+	<div style="display: inline-block;width: 100%">
+		<!-- Text layout -->
+		<div style="text-align: center;position: absolute; width: calc(100vw)">
+			<p>cat in woods</p>
+			<p  style="color: white;padding-top: calc(15vh)"><span class="cursor">start</span></p>
+		</div>
+		<div style="text-align: center;left:calc(100vw);position: absolute; width: calc(100vw)">
+			<p>cat's feel hungry</p>
+			<p  style="color: white;">walk out of wood?</p>
+			<p style="color: white;"><span class="cursor" style="padding-right: calc(5vw)">Yes</span><span class="no">No</span></p>
+		</div>
+		<div class="yes1" style="text-align: center;left:calc(200vw);position: absolute; width: calc(100vw)">
+			<p>cat meets a dog</p>
+			<p  style="color: white;padding-top: calc(15vh)"><span class="cursor">escape to tree</span></p>
+		</div>
+		<div class="yes1" style="text-align: center;left:calc(300vw);position: absolute; width: calc(100vw)">
+			<p><span class="cursor">the dog left</span></p>
+		</div>
+		<div class="yes1" style="text-align: center;left:calc(400vw);position: absolute; width: calc(100vw)">
+			<p ><span class="cursor">cat meets stranger</span></p>
+		</div>
+		<div class="yes1" style="text-align: center;left:calc(500vw);position: absolute; width: calc(100vw)">
+			<p class="cursor"><span class="cursor">finds stranger as its owner</span></p>
+		</div>
+		<div class="yes1" style="text-align: center;left:calc(600vw);position: absolute; width: calc(100vw)">
+			<p ><span style="cursor: pointer;">cat gets home</span></p>
+		</div>
+		<!-- Branches of text -->
+		<div id="no1" style="text-align: center;left:calc(700vw);position: absolute; width: calc(100vw)">
+			<p ><span class="cursor">bind a bird</span></p>
+		</div>
+		<div style="display: flex;position: absolute;bottom: 0;width: calc(15vw)">
+			<div style="left:calc(30vw);position: absolute;bottom: -13px;">
+				<img style="width: 200px;height: 150px;" src="static/cat1.png">
+			</div>
+			<div  style="left:calc(130vw);position: absolute;bottom: -5px;">
+				<img style="width: 220px;height: 150px;" src="static/cat2.png">
+			</div>
+			<div style="left:calc(130vw + 200px);position: absolute;bottom: 97px;">
+				<img style="width: 200px;height: 150px;" src="static/hug12.png">
+			</div>
+
+
+			<!-- Branch for no option -->
+			<div id="no" style="left:calc(760vw);position: absolute;bottom: -10px;">
+				<img style="width: 200px;height: 150px;" src="static/cat3(2).png">
+			</div>
+
+			<!-- Branch for yes option -->
+			<div class="yes" style="left:calc(225vw);position: absolute;bottom: -10px;">
+				<img style="width: 200px;height: 150px;" src="static/cat3(1).png">
+			</div>
+			<div class="yes" style="left:calc(265vw);position: absolute;bottom: -5px;">
+				<img style="width: 200px;height: 150px;" src="static/dog1.png">
+			</div>
+			<div class="yes" style="left:calc(330vw);position: absolute;bottom: -14px;">
+				<img style="width: 200px;height: 150px;" src="static/dog2.png">
+			</div>
+			<div class="yes" style="left:calc(343vw);position: absolute;bottom: -4px;">
+				<img style="width: 300px;height: 600px;" src="static/tree.png">
+			</div>
+			<div class="yes" style="left:calc(435vw);position: absolute;bottom: -5px;">
+				<img style="width: 130px;height: 300px;" src="static/men1.png">
+			</div>
+			<div class="yes" style="left:calc(455vw);position: absolute;bottom: -18px;">
+				<img style="width: 200px;height: 150px;" src="static/cat5.png">
+			</div>
+			<div class="yes" style="left:calc(535vw);position: absolute;bottom: -10px;">
+				<img style="width: 200px;height: 150px;" src="static/cat6.png">
+			</div>
+			<div class="yes" style="left:calc(555vw);position: absolute;bottom: -5px;">
+				<img style="width: 130px;height: 300px;" src="static/men2.png">
+			</div>
+			<div class="yes" style="left:calc(640vw);position: absolute;bottom: -22px;">
+				<img style="width: 400px;height: 350px;" src="static/house2.png">
+			</div>
+
+			<div class="yes" style="left:calc(349vw);position: absolute;bottom: calc(67vh);">
+				<img style="width: 50px;height: 50px;" src="static/cat4.png">
+			</div>
+
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery.js">
+
+</script>
+<script>
+	$("html").scrollLeft(0)
+	$(".no").click(function () {
+		// When clicking on the branch with the no option, all images are moved back 100 screen widths
+		$("#no").css({
+			"left": "260vw"
+		})
+		$("#no1").css({
+			"left": "200vw"
+		})
+		$(".yes1:eq(0)").css({
+			"left": "calc(300vw)"
+		})
+		$(".yes1:eq(1)").css({
+			"left": "calc(400vw)"
+		})
+		$(".yes1:eq(2)").css({
+			"left": "calc(500vw)"
+		})
+		$(".yes1:eq(3)").css({
+			"left": "calc(600vw)"
+		})
+		$(".yes1:eq(4)").css({
+			"left": "calc(700vw)"
+		})
+
+		$(".yes:eq(0)").css({
+			"left": "calc(325vw)"
+		})
+		$(".yes:eq(1)").css({
+			"left": "calc(365vw)"
+		})
+		$(".yes:eq(2)").css({
+			"left": "calc(430vw)"
+		})
+		$(".yes:eq(3)").css({
+			"left": "calc(443vw)"
+		})
+		$(".yes:eq(4)").css({
+			"left": "calc(535vw)"
+		})
+		$(".yes:eq(5)").css({
+			"left": "calc(555vw)"
+		})
+		$(".yes:eq(6)").css({
+			"left": "calc(635vw)"
+		})
+		$(".yes:eq(7)").css({
+			"left": "calc(655vw)"
+		})
+		$(".yes:eq(8)").css({
+			"left": "calc(740vw)"
+		})
+
+		$(".yes:eq(9)").css({
+			"left": "calc(449vw)"
+		})
+		/* Perform a right shift of the total screen width */
+		// Total screen width
+		var windowWidth = $(window).width()
+		// Current scrollbar position
+		var myWidth = $("html").scrollLeft()
+		// Current scrollbar position
+		var myWidth1 = $("html").scrollLeft()
+		// Start scrollbar scrolling
+		var itemer = setInterval(function () {
+			// Add 10 widths at a time
+			myWidth = myWidth + 10
+			// Modify scrollbar position
+			$("html").scrollLeft(myWidth)
+			// Reach total screen width, turn off scroll bar scrolling
+			if(myWidth >= windowWidth + myWidth1) {
+				clearInterval(itemer)
+			}
+		},10)//Need to speed up, the smaller the value the faster
+	})
+    $(".cursor").click(function () {
+		/* Perform a right shift of the total screen width */
+		// Total screen width
+		var windowWidth = $(window).width()
+		// Current scrollbar position
+		var myWidth = $("html").scrollLeft()
+		// Current scrollbar position
+		var myWidth1 = $("html").scrollLeft()
+		// Start of scrollbar scrolling
+		var itemer = setInterval(function () {
+			// Add 10 widths at a time
+			myWidth = myWidth + 10
+			// Modify scrollbar position
+			$("html").scrollLeft(myWidth)
+			// Reach total screen width, turn off scroll bar scrolling
+			if(myWidth >= windowWidth + myWidth1) {
+				clearInterval(itemer)
+			}
+		},10)
+    })
+</script>
+<style type="text/css">
+	/* Set the screen width to a maximum of eight screen sizes */
+    html, body {
+		width: 800vw;
+		overflow-x: hidden;
+		overflow-y: hidden;
+
+        height: 110%;
+        margin: 0;
+        padding: 0;
+		background-image: url('./static/forest3.png');
+		background-size: 100% 100%;
+    }
+	/* Set the text animation effect, set the font */
+    p {
+        -webkit-animation: transform-show 2s 1 ease;
+		font-size: 70px;
+		font-family: 'MyCustomFont', sans-serif;
+    }
+	/* Cursor placed on element showing palm */
+	.cursor {
+		cursor: pointer;
+	}
+	.no {
+		cursor: pointer;
+	}
+	/* Animated definition of text transparency */
+	@-webkit-keyframes transform-show {
+        0% {
+            opacity: 0;
+        }
+        25% {
+            opacity: 0.25;
+        }
+        50% {
+            opacity: 0.5;
+        }
+        75% {
+            opacity: 0.75;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+	/* Add custom fonts */
+	@font-face {
+
+		font-family: "MyCustomFont";
+
+		src: url("fonts/Chiller.ttf") format("truetype");
+
+	}
+
+
+</style>
+
+</html>
